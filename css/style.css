@@ -6,6 +6,8 @@
   --main-logo-color: #2196f3;
 }
 
+/* Остальной код */
+
 p,
 h1,
 h2,
@@ -37,7 +39,6 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px solid green;
 }
 
 section {
@@ -53,12 +54,8 @@ body {
 
 /* Шапка: логотип, меню, контакты */
 
-.header {
-  padding-top: 35px;
-  padding-bottom: 29px;
-}
-
 .header-logo {
+  display: flex;
   font-family: "Raleway";
   font-weight: 700;
   font-style: normal;
@@ -67,21 +64,38 @@ body {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: var(--main-logo-color);
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 .header-logo-color {
   color: #212121;
 }
 
+.header {
+  border-bottom: 1px solid red;
+}
+
+.header-nav {
+  margin-left: 93px;
+  margin-right: 331px;
+}
 .nav-list {
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1, 14;
   letter-spacing: 0.02em;
   list-style: none;
 }
+
+.nav-list li {
+  display: inline;
+}
 .nav-btn {
   text-decoration: none;
   color: var(--main-text-color);
+  padding: 32px 0;
+  margin-right: 50px;
 }
 
 .nav-list .nav-btn.current {
@@ -96,6 +110,7 @@ body {
 .contact {
   list-style: none;
   display: flex;
+  align-content: flex-end;
 }
 
 .contact :hover,
@@ -109,6 +124,8 @@ body {
   letter-spacing: 0.02em;
   color: #757575;
   text-decoration: none;
+  padding: 32px 0;
+  margin-left: 50px;
 }
 
 /* Герой */

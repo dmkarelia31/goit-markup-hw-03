@@ -31,7 +31,6 @@ button {
 img {
   display: block;
   max-width: 100%;
-  height: auto;
 }
 
 .container {
@@ -39,23 +38,40 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+  outline: 2px dashed #f44336;
 }
 
 section {
   padding-top: 94px;
-  padding-bottom: 94px;
 }
 
 body {
+  margin: 0;
   background-color: #fff;
   color: #212121;
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 /* Шапка: логотип, меню, контакты */
+
+.header-container {
+  display: flex;
+  align-items: center;
+}
 
 .header-logo {
   display: flex;
+  margin-right: 93px;
   font-family: "Raleway";
   font-weight: 700;
   font-style: normal;
@@ -72,13 +88,13 @@ body {
 }
 
 .header {
-  border-bottom: 1px solid red;
+  display: block;
+  height: 0px;
+  left: 0px;
+  top: 80px;
+  border: 1px solid #ececec;
 }
 
-.header-nav {
-  margin-left: 93px;
-  margin-right: 331px;
-}
 .nav-list {
   display: flex;
   font-weight: 500;
@@ -88,13 +104,17 @@ body {
   list-style: none;
 }
 
-.nav-list li {
-  display: inline;
-}
 .nav-btn {
   text-decoration: none;
   color: var(--main-text-color);
   padding: 32px 0;
+}
+
+.nav-list > .header-item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contact-item:first-child {
   margin-right: 50px;
 }
 
@@ -108,9 +128,10 @@ body {
 }
 
 .contact {
+  margin-left: auto;
+
   list-style: none;
   display: flex;
-  align-content: flex-end;
 }
 
 .contact :hover,
@@ -125,17 +146,22 @@ body {
   color: #757575;
   text-decoration: none;
   padding: 32px 0;
-  margin-left: 50px;
 }
 
 /* Герой */
 
+.hero {
+  text-align: center;
+}
+
 .hero-container {
   background-color: #2f303a;
-  text-align: center;
 }
 .hero-text {
   width: 696px;
+  padding-top: 118px;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -145,6 +171,9 @@ body {
   color: #ffffff;
 }
 .hero-btn {
+  width: 200px;
+  margin-top: 30px;
+  margin-bottom: 200px;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -159,14 +188,31 @@ body {
 
 /* Features */
 
-.features {
+.features-container {
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: -10px;
+  margin-top: -10px;
 }
+
+.features-item {
+  margin-left: 10px;
+  margin-top: 10px;
+
+  width: 270px;
+}
+
+.features-item:nth-child(-n + 3) {
+  margin-right: 30px;
+}
+
 .features li h3 {
   list-style: none;
   text-transform: uppercase;
 }
 
 .features-title {
+  margin-bottom: 10px;
   font-weight: bold;
   font-size: 14px;
   line-height: 16px;
@@ -182,7 +228,9 @@ body {
 }
 
 /* Чем мы занимаемся */
+
 .works-title {
+  margin-bottom: 50px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1, 16;
@@ -193,6 +241,10 @@ body {
 .works-img {
   list-style: none;
   display: flex;
+}
+
+.img:not(:last-child) {
+  margin-right: 30px;
 }
 
 /* Команда */
@@ -209,10 +261,28 @@ body {
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-text-color);
+  margin-bottom: 50px;
+  padding-top: 94px;
+}
+
+.img {
+  background: #fff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+.person-name {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.profession {
+  padding-bottom: 30px;
 }
 .team-person {
   list-style: none;
   display: flex;
+  padding-bottom: 94px;
 }
 
 .team-person h3 {
@@ -235,8 +305,10 @@ body {
 
 /* Секция фильров */
 .filter-list {
+  width: 611px;
   background: #f5f4fa;
   border-radius: 4px;
+  border: transparent;
   list-style: none;
   display: flex;
 }
@@ -282,10 +354,16 @@ body {
   color: #757575;
   text-align: left;
 }
+
+.samples-galery {
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+}
 .sample-item {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 94px;
 }
 
 .sample-link {
@@ -295,6 +373,13 @@ body {
 /* Footer */
 .footer {
   background-color: #2f303a;
+  padding-top: 60px;
+}
+
+.footer-container {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .footer-logo {
@@ -318,6 +403,17 @@ body {
   letter-spacing: 0.03em;
   color: #ffffff;
   text-decoration: none;
+}
+
+.footer-item > .contact-list:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.contact-list:first-child {
+  margin-top: 20px;
+}
+.contact-list:last-child {
+  margin-bottom: 60px;
 }
 
 .footer-contact {

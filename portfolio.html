@@ -21,8 +21,8 @@
         <a class="header-logo" href="./index.html">Web<span class="header-logo-color">Studio</span></a>
         <nav class="header-nav">
             <ul class="nav-list">
-                <li class="header-item"> <a class="nav-btn current" href="./index.html">Студия</a> </li>
-                <li class="header-item"> <a class="nav-btn" href="./portfolio.html">Портфолио</a> </li>
+                <li class="header-item"> <a class="nav-btn" href="./index.html">Студия</a> </li>
+                <li class="header-item"> <a class="nav-btn current" href="./portfolio.html">Портфолио</a> </li>
                 <li class="header-item"> <a class="nav-btn" href="">Контакты</a> </li>
             </ul>
         </nav>
@@ -38,110 +38,130 @@
 <!-- Герой -->
 <main>
     <!-- Секция фильров -->
-    <section>
+  
+    <section class="section samples-section">
         <div class="container">
-            <h1>Портфолио</h1>
+            <h1 hidden>Портфолио</h1>
             <!-- этим кнопкам дать фон и цвет текста в обычном стостоянии + в состоянии hover/focus  -->
             <ul class="filter-list">
-                <li><button class="filter-item" type="button">Все</button></li>
-                <li><button class="filter-item" type="button">Веб-сайты</button></li>
-                <li><button class="filter-item" type="button">Приложения</button></li>
-                <li><button class="filter-item" type="button">Дизайн</button></li>
-                <li><button class="filter-item" type="button">Маркетинг</button></li>
+                <li class="filter-btn"><button class="filter-item" type="button">Все</button></li>
+                <li class="filter-btn"><button class="filter-item" type="button">Веб-сайты</button></li>
+                <li class="filter-btn"><button class="filter-item" type="button">Приложения</button></li>
+                <li class="filter-btn"><button class="filter-item" type="button">Дизайн</button></li>
+                <li class="filter-btn"><button class="filter-item" type="button">Маркетинг</button></li>
             </ul>
         </div>
-    </section>
+    
 
 
     <!-- Примеры работ -->
-    <section class="samples-section">
-        <div class="container">
+        <div class="container samples-container">
             <ul class="sample-item">
-                <li> 
+                <li class="sample-icon"> 
                     <div class="samples-galery">
                     <a class="sample-link" href="">
                         <img src="./images/sample1.jpg" alt="пример разработки веб сайта" width="370">
-                        <h2>Технокряк</h2>
-                        <p>Веб-сайт</p>
+                    <div class="sample-content">
+                        <h2 class="sample-title">Технокряк</h2>
+                        <p class="sample-text">Веб-сайт</p>
+                    </div> 
                     </a>
                     </div>
                 </li>
                 
-                <li>
+                <li class="sample-icon">
                     <div class="samples-galery">
                     <a class="sample-link" href="">
                         <img src="./images/sample2.jpg" alt="Дизайн постера" width="370">
-                        <h2>Постер New Orlean vs Golden Star</h2>
-                        <p>Дизайн</p>
+                        <div class="sample-content">
+                        <h2 class="sample-title">Постер New Orlean vs Golden Star</h2>
+                        <p class="sample-text">Дизайн</p>
+                        </div>
                     </a>
                     </div>
                 </li>
-                <li>
+                <li class="sample-icon">
                     <div class="samples-galery">
                     <a class="sample-link" href="">
                         <img src="./images/sample3.jpg" alt="Дизайн приложения для ресторана морской кухни" width="370">
-                        <h2>Ресторан Seafood</h2>
-                        <p>Приложение</p>
+                        <div class="sample-content">
+                        <h2 class="sample-title">Ресторан Seafood</h2>
+                        <p class="sample-text">Приложение</p>
+                        </div>
                     </a>
                     </div>
                 </li>
-                <li>
+                <li class="sample-icon">
                     <div class="samples-galery">
                     <a class="sample-link" href="">
                         <img src="./images/sample4.jpg" alt="Дизайн маркетингового оформления" width="370">
-                        <h2>Проект Prime</h2>
-                        <p>Маркетинг</p>
+                        <div class="sample-content">
+                        <h2 class="sample-title">Проект Prime</h2>
+                        <p class="sample-text">Маркетинг</p>
+                        </div>
                     </a>
                     </div>
                 </li>
-                <li>
+                <li class="sample-icon">
                     <div class="samples-galery">
                     <a class="sample-link" href="">
                         <img src="./images/sample5.jpg" alt="Дизайн упаковки" width="370">
-                        <h2>Проект Boxes</h2>
-                        <p>Приложение</p>
+                        <div class="sample-content">
+                        <h2 class="sample-title">Проект Boxes</h2>
+                        <p class="sample-text">Приложение</p>
+                        </div>
                     </a>
                     </div>
                 </li>
-                <li>
+                <li class="sample-icon">
                     <div class="samples-galery">
                     <a class="sample-link" href="">
                         <img src="./images/sample6.jpg" alt="Дизайн веб сайта" width="370">
-                        <h2>Inspiration has no Borders</h2>
-                        <p>Веб-сайт</p>
+                        <div class="sample-content">
+                        <h2 class="sample-title">Inspiration has no Borders</h2>
+                        <p class="sample-text">Веб-сайт</p>
+                        </div>
                     </a>
                     </div>
                 </li>
-                <li>
+                <li class="sample-icon">
                     <div class="samples-galery">
                     <a class="sample-link" href="">
                         <img src="./images/sample7.jpg" alt="Дизайн книги" width="370">
-                        <h2>Издание Limited Edition</h2>
-                        <p>Дизайн</p>
+                        <div class="sample-content">
+                        <h2 class="sample-title">Издание Limited Edition</h2>
+                        <p class="sample-text">Дизайн</p>
+                        </div>
                     </a>
                     </div>
                 </li>
-                <li>
+                <li class="sample-icon">
                     <div class="samples-galery">
                     <a class="sample-link" href="">
                         <img src="./images/sample8.jpg" alt="Дизайн логотпа" width="370">
-                        <h2>Проект LAB</h2>
-                        <p>Маркетинг</p>
+                        <div class="sample-content">    
+                        <h2 class="sample-title">Проект LAB</h2>
+                        <p class="sample-text">Маркетинг</p>
+                        </div>
                     </a>
                     </div>
                 </li>
-                <li>
+                <li class="sample-icon">
                     <div class="samples-galery">
                     <a class="sample-link" href="">
                         <img src="./images/sample9.jpg" alt="Дизайн приложения">
-                        <h2>Growing Business</h2>
-                        <p>Приложение</p>
+                        <div class="sample-content">
+                        <h2 class="sample-title">Growing Business</h2>
+                        <p class="sample-text">Приложение</p>
+                        </div>
                     </a>
                     </div>
                 </li>
             </ul>
         </div>
+       
     </section>
+
 
 
 

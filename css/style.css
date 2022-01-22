@@ -26,11 +26,13 @@ ul {
 
 button {
   cursor: pointer;
+  border: solid transparent;
 }
 
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .container {
@@ -38,11 +40,12 @@ img {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 2px dashed #f44336;
+  /* outline: 2px dashed #f44336; */
 }
 
 section {
   padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 body {
@@ -88,11 +91,7 @@ html {
 }
 
 .header {
-  display: block;
-  height: 0px;
-  left: 0px;
-  top: 80px;
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
 
 .nav-list {
@@ -129,7 +128,6 @@ html {
 
 .contact {
   margin-left: auto;
-
   list-style: none;
   display: flex;
 }
@@ -152,6 +150,7 @@ html {
 
 .hero {
   text-align: center;
+  padding-top: 0;
 }
 
 .hero-container {
@@ -159,7 +158,7 @@ html {
 }
 .hero-text {
   width: 696px;
-  padding-top: 118px;
+  padding-top: 200px;
   margin-left: auto;
   margin-right: auto;
   font-weight: 900;
@@ -171,22 +170,36 @@ html {
   color: #ffffff;
 }
 .hero-btn {
-  width: 200px;
+  display: inline-block;
+  padding: 10px 32px;
+  min-width: 200px;
   margin-top: 30px;
   margin-bottom: 200px;
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: transparent;
 }
+
+.hero-btn:hover {
+  background-color: #188ce8;
+}
+
 .hero-btn.text {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: #ffffff;
+  text-align: center;
+  align-items: center;
 }
 
 /* Features */
+
+.features {
+  padding-top: 0;
+}
 
 .features-container {
   display: flex;
@@ -229,6 +242,10 @@ html {
 
 /* Чем мы занимаемся */
 
+.works {
+  padding-top: 0;
+}
+
 .works-title {
   margin-bottom: 50px;
   font-weight: 700;
@@ -249,6 +266,7 @@ html {
 
 /* Команда */
 .team {
+  padding-top: 0;
   background: #f5f4fa;
   text-align: center;
 }
@@ -282,7 +300,6 @@ html {
 .team-person {
   list-style: none;
   display: flex;
-  padding-bottom: 94px;
 }
 
 .team-person h3 {
@@ -304,13 +321,25 @@ html {
 }
 
 /* Секция фильров */
+
+.samples-section {
+  padding-top: 115px;
+  padding-bottom: 73px;
+}
+
+.filter-btn:not(:last-child) {
+  margin-right: 8px;
+}
+
 .filter-list {
-  width: 611px;
-  background: #f5f4fa;
+  background: #fff;
   border-radius: 4px;
-  border: transparent;
+  text-align: center;
+  align-items: center;
   list-style: none;
   display: flex;
+  justify-content: center;
+  margin-bottom: 34px;
 }
 
 .filter-item {
@@ -322,15 +351,17 @@ html {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
   cursor: pointer;
-  border: 1px solid black;
+  border: 1px;
   border-radius: 4px;
-  margin-right: 3px;
-  margin-bottom: 5px;
+  padding: 6px 22px;
+  min-width: 73px;
 }
 
 .filter-list :hover {
   background-color: var(--accent-bg-color);
   color: var(--accent-text-color);
+  border-radius: 4px;
+  border: transparent;
 }
 .filter-list :focus {
   background-color: var(--accent-bg-color);
@@ -339,7 +370,7 @@ html {
 
 /* Примеры работ */
 
-.samples-section li h2 {
+.samples-container li h2 {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -347,7 +378,7 @@ html {
   text-align: left;
   color: #212121;
 }
-.samples-section li p {
+.samples-container li p {
   font-size: 16px;
   line-height: 1.87;
   letter-spacing: 0.03em;
@@ -357,13 +388,31 @@ html {
 
 .samples-galery {
   background: #ffffff;
-  border: 1px solid #eeeeee;
+}
+
+.sample-content {
+  padding: 20px 24px;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+.sample-title {
+  margin-bottom: 4px;
 }
 .sample-item {
-  list-style: none;
   display: flex;
+  margin-left: -30px;
+  margin-bottom: -30px;
   flex-wrap: wrap;
-  padding-bottom: 94px;
+  text-align: left;
+}
+
+.sample-icon {
+  background: #ffffff;
+  width: calc(100% / 3 - 30px);
+  margin-left: 30px;
+  margin-bottom: 30px;
 }
 
 .sample-link {
@@ -423,7 +472,4 @@ html {
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
-}
-.footer-item {
-  list-style: none;
 }

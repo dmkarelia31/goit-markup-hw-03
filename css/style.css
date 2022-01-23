@@ -423,7 +423,7 @@ html {
   background: #ffffff;
   width: calc(100% / 3 - 30px);
   margin-left: 30px;
-  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 .sample-link {
@@ -446,6 +446,8 @@ html {
 }
 
 .footer-logo {
+  display: block;
+  margin-bottom: 20px;
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -458,6 +460,10 @@ html {
   color: #fff;
 }
 
+.contact-secondary {
+  margin-left: auto;
+  list-style: none;
+}
 .footer-address {
   font-style: normal;
   font-weight: normal;
